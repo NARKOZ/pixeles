@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import _ from 'lodash'
+import 'bootstrap/js/dist/util'
+import 'bootstrap/js/dist/collapse'
 
 Vue.config.productionTip = false
 

@@ -33,7 +33,9 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
       PhotoSwipe: 'photoswipe',
-      PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
+      PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js',
+      Util: 'exports-loader?Util!bootstrap/js/dist/util',
+      Collapse: 'exports-loader?Util!bootstrap/js/dist/collapse'
     })
   ],
   module: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="image-count hidden-xs hidden-sm" @click="getNext" :title="next ? 'Click for more' : ''">
+  <div class="image-count d-none d-lg-block d-xl-block" @click="getNext" :title="next ? 'Click for more' : ''">
     <div class="count-label" :class="{ clickable: next !== null }">{{ counterText }}</div>
   </div>
 </template>

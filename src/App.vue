@@ -2,16 +2,23 @@
   <div id="app">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" @click="scrollToTop">
       <router-link class="navbar-brand" to="/">Pixels</router-link>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" v-for="source in sources" :class="{ active: $route.params.subreddit == source }">
-          <router-link class="nav-link" :to="{ name: 'subreddit', params: { subreddit: source } }">{{ source }}</router-link>
-        </li>
-      </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#" @click.prevent="switchLayout">Layout: {{ layout.multiple ? 'multi' : 'compact' }}</a>
-        </li>
-      </ul>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" v-for="source in sources" :class="{ active: $route.params.subreddit == source }">
+            <router-link class="nav-link" :to="{ name: 'subreddit', params: { subreddit: source } }">{{ source }}</router-link>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" @click.prevent="switchLayout">Layout: {{ layout.multiple ? 'multi' : 'compact' }}</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <transition>
