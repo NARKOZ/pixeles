@@ -18,7 +18,7 @@ export default {
   props: ['link'],
   methods: {
     getIndex: function(link) {
-      return _.indexOf(this.$parent.links, link);
+      return this.$parent.links.indexOf(link);
     },
     expandUrl: function(u) {
       return 'https://reddit.com' + u;
@@ -27,7 +27,9 @@ export default {
       if (link.preview === undefined) { return link.url; }
       var resolution;
       var resolutions = link.preview.images[0].resolutions;
-      var sizes = _.map(resolutions, 'width');
+      var sizes = resolutions.map(function(resolution) {
+        return resolution.width;
+      });
 
       if (this.$parent.layout.multiple) {
         if (_.includes(sizes, 640)) {

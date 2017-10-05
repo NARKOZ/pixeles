@@ -131,7 +131,9 @@ export default {
       var self = this;
       $.getJSON(url, function(data) {
         self.next = data.data.after;
-        var links = _.map(data.data.children, 'data');
+        var links = data.data.children.map(function(child) {
+          return child.data;
+        });
         links = _.filter(links, function(link) {
           return link.url.match(/\.(png|jpg|jpeg)$/i) && link.over_18 === false;
         });

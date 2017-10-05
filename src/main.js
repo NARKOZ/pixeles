@@ -3,7 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import _ from 'lodash'
+import {
+  chunk,
+  filter,
+  flatten,
+  includes,
+  unescape
+} from 'lodash'
 import 'bootstrap/js/dist/util'
 import 'bootstrap/js/dist/collapse'
 
