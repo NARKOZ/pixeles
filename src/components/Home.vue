@@ -33,6 +33,7 @@
       </template>
     </div>
 
+    <div class="mx-auto no-items-message" v-if="links.length === 0">Sorry, no items found.</div>
     <div class="loading-message" v-if="loading">Loading..</div>
     <div class="load-more" @click="getNext" v-if="!loading && next !== null">More</div>
   </div>
@@ -202,4 +203,9 @@ export default {
   @extend .loading-message
   color: #427FED
   cursor: pointer
+
+.no-items-message
+  width: 200px
+  padding-top: 20px
+  color: #737373
 </style>
