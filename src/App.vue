@@ -181,7 +181,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+@import "~bootstrap/scss/bootstrap"
 
 body
   padding: 60px 0 20px 0
