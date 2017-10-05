@@ -93,11 +93,7 @@ export default {
     });
 
     $(window).scroll(function() {
-      if (($(window).scrollTop() + $(window).height() > $(document).height() - 300) && self.next !== null) {
-        self.isNearBottom = true;
-      } else {
-        self.isNearBottom = false;
-      }
+      self.isNearBottom = ($(window).scrollTop() + $(window).height() > $(document).height() - 300) && self.next !== null
     });
   },
   created: function() {
