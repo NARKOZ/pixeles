@@ -1,7 +1,7 @@
 {
-  "name": "pixels",
+  "name": "pixeles",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "Photo gallery web application",
   "author": "Nihad Abbasov <nihad@42na.in>",
   "private": true,
   "scripts": {

@@ -1,10 +1,13 @@
-# pixels
+# Pixeles
 
-> A Vue.js project
+Reddit photo gallery web application that allows user to view images from
+predefined communities. Built using VueJS 2 and Bootstrap 4.
+
+Demo: https://pixeles.surge.sh/
 
 ## Build Setup
 
-``` bash
+```sh
 # install dependencies
 npm install
 
@@ -16,6 +19,11 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# deploy
+npm run build && npm run deploy
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## License
+
+Released under the BSD 2-clause license. See LICENSE.txt for details.

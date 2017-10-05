@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" @click="scrollToTop">
-      <router-link class="navbar-brand" to="/">Pixels</router-link>
+      <router-link class="navbar-brand" to="/">Pixeles</router-link>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
