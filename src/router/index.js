@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Post from '@/components/Post'
+import Home from '@/components/Home'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Post',
-      component: Post
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/r/:subreddit',
+      name: 'subreddit',
+      component: Home
     }
   ]
 })
