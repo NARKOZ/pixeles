@@ -29,9 +29,8 @@ export default {
     return {
       layout: { multiple: true },
       sources: [
-        'MostBeautiful', 'Pixiv', 'touhou', 'RoomPorn', 'Moescape', 'Patchuu',
-        'ViewPorn', 'FuturePorn', 'MinimalWallpaper', 'AnimePhoneWallpapers',
-        'animewallpaper'
+        'MostBeautiful', 'Pixiv', 'RoomPorn', 'ViewPorn', 'FuturePorn', 'Moescape', 'MinimalWallpaper',
+        'AnimePhoneWallpapers', 'animewallpaper'
       ],
     }
   },
