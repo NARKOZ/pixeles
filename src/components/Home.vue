@@ -33,7 +33,7 @@
       </template>
     </div>
 
-    <div class="mx-auto no-items-message" v-if="links.length === 0">Sorry, no items found.</div>
+    <div class="mx-auto no-items-message" v-if="!loading && links.length === 0">Sorry, no items found.</div>
     <div class="loading-message" v-if="loading">Loading..</div>
     <div class="load-more" @click="getNext" v-if="!loading && next !== null">More</div>
   </div>
