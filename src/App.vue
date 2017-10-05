@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" @click="scrollToTop">
       <router-link class="navbar-brand" to="/">Pixels</router-link>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" v-for="source in sources" :class="{ active: $route.params.subreddit == source }">
@@ -43,6 +43,10 @@ export default {
       this.layout.multiple = !(this.layout.multiple);
       localStorage.setItem('multiLayout', this.layout.multiple);
     },
+    scrollToTop: function() {
+      var $body = $('html, body');
+      $body.animate({ scrollTop: 0 }, 'fast');
+    }
   },
 }
 

@@ -19,6 +19,10 @@ export default {
     getNext: function() {
       if (this.next === null) { return; }
       if (this.$parent.loading === true) { return; }
+
+      var $body = $('html, body');
+      $body.animate({ scrollTop: $(document).height() }, 'fast');
+
       this.$parent.loading = true;
       this.$parent.fetchData(this.$parent.apiUrl + '&after=' + this.next);
     }

@@ -80,6 +80,26 @@ export default {
       return url;
     },
   },
+  mounted: function() {
+    var $body = $('html, body'),
+        self = this;
+
+    // load more when 'R' key is pressed
+    $(document).keypress(function(e) {
+      if (e.which === 82) {
+        $body.animate({ scrollTop: $(document).height() }, 'fast');
+        self.getNext();
+      }
+    });
+
+    $(window).scroll(function() {
+      if (($(window).scrollTop() + $(window).height() > $(document).height() - 300) && self.next !== null) {
+        self.isNearBottom = true;
+      } else {
+        self.isNearBottom = false;
+      }
+    });
+  },
   created: function() {
     this.initLocalData();
     this.fetchData(this.apiUrl);
