@@ -178,10 +178,49 @@ export default {
     }
   }
 }
+
+var pswpElement = $('.pswp')[0],
+    galleryOptions = {
+      history: false,
+      preload: [1, 2]
+    },
+    gallery;
+
+function galleryItems() {
+  var images = $('.post img'),
+      items = [],
+      $img, item;
+
+  _.forEach(images, function(img) {
+    $img = $(img);
+    item = {
+      src: $img.data('source'),
+      w: $img.data('source-width') || $img.width(),
+      h: $img.data('source-height') || $img.height(),
+      msrc: $img.attr('src'),
+      title: $img.data('title')
+    };
+    items.push(item);
+  });
+
+  return items;
+}
+
+$('body').on('click', '.js-image-link', function(e) {
+  e.preventDefault();
+  var items = galleryItems(),
+      shareUrl = 'https://redd.it/' + $(this).parent().find('.js-post-link').data('id');
+  galleryOptions.index = $(this).find('img').data('index');
+  galleryOptions.getPageURLForShare = function(shareButtonData) { return shareUrl; };
+  gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, galleryOptions);
+  gallery.init();
+});
 </script>
 
 <style lang="sass">
 @import "~bootstrap/scss/bootstrap"
+@import "~photoswipe/dist/photoswipe.css"
+@import "~photoswipe/dist/default-skin/default-skin.css"
 
 body
   padding: 60px 0 20px 0

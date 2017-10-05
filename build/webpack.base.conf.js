@@ -10,7 +10,8 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    vendor: ['photoswipe', 'photoswipe/src/js/ui/photoswipe-ui-default.js']
   },
   output: {
     path: config.build.assetsRoot,
@@ -30,7 +31,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
+      PhotoSwipe: 'photoswipe',
+      PhotoSwipeUI_Default: 'photoswipe/src/js/ui/photoswipe-ui-default.js'
     })
   ],
   module: {
