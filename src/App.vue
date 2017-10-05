@@ -21,7 +21,7 @@
       </div>
     </nav>
 
-    <transition>
+    <transition name="fade">
       <router-view :key="$route.fullPath"></router-view>
     </transition>
   </div>
@@ -130,4 +130,10 @@ body
       color: #262626
       font-weight: bold
       border-bottom: 2px solid #427fed
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .3s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
 </style>
