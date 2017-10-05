@@ -26,7 +26,7 @@
     <div v-else>
       <template v-for="link in links" track-by="id">
         <div class="row">
-          <div :class="(link.preview && link.preview.images[0].source.width) > 980 ? 'col-md-12' : 'col-md-6 col-center'">
+          <div :class="(link.preview && link.preview.images[0].source.width) > 980 ? 'col-md-12' : 'col-md-6 mx-auto'">
             <post :link="link"></post>
           </div>
         </div>
@@ -175,10 +175,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.col-center
-  float: none
-  margin: 0 auto
-
 .filters
   line-height: 40px
   color: #fff
