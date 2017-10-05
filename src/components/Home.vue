@@ -34,7 +34,7 @@
     </div>
 
     <div class="loading-message" v-if="loading">Loading..</div>
-    <div class="load-more hidden-md hidden-lg" @click="getNext" v-if="!loading && next !== null">More</div>
+    <div class="load-more" @click="getNext" v-if="!loading && next !== null">More</div>
   </div>
 </div>
 </template>
