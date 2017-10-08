@@ -25,11 +25,11 @@ export default {
     },
     getPreview: function(link) {
       if (link.preview === undefined) { return link.url; }
-      var resolution;
-      var resolutions = link.preview.images[0].resolutions;
-      var sizes = resolutions.map(function(resolution) {
-        return resolution.width;
-      });
+      var resolution,
+          resolutions = link.preview.images[0].resolutions,
+          sizes = resolutions.map(function(resolution) {
+            return resolution.width;
+          });
 
       if (this.$parent.layout.multiple) {
         if (_.includes(sizes, 640)) {
